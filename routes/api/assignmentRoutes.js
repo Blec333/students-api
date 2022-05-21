@@ -5,14 +5,16 @@ const {
   createAssignment,
   updateAssignment,
   deleteAssignment,
-} = require('../../controllers/AssignmentController.js');
+} = require('../../controllers/assignmentController.js');
 
 // /api/Assignments
-router.route('/').get(getAssignments).post(createAssignment);
+router.route('/')
+.get(getAssignments)
+.post(createAssignment);
 
 // /api/Assignments/:AssignmentId
 router
-  .route('/:AssignmentId')
+  .route('/:assignmentId')
   .get(getSingleAssignment)
   .put(updateAssignment)
   .delete(deleteAssignment);
